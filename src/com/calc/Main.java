@@ -19,10 +19,11 @@ public class Main {
         //double n1, n2;
         File file = new File("C:/Test.csv");
         try{
+            //Trzeba dodać kolejno linie z pliku i je obliczyć
             Scanner sc = new Scanner(file);
             int n1 = sc.nextInt();
-            while (sc.hasNextInt()) {
-                
+            while (sc.hasNextInt()) { sc.delimiter(;)
+
 
             }
 
