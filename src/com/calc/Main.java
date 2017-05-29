@@ -2,11 +2,12 @@ package com.calc;
 
 import javafx.scene.web.PromptData;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InputMismatchException {
 	// zrobic prosty kalkultor ktory przy uzyciu metody Scanner daje nam mozliwosc dodawania, odejmowania, mnozenia i dzielenia
        /* Scanner sc = new Scanner(System.in);
         int x = sc.nextInt();
@@ -26,21 +27,23 @@ public class Main {
         System.out.println("Enter your operation");
         operation = op.next();
 
-        switch (operation){
-            case "+":
-                System.out.println("Your answer is: " + (n1+n2));
-                break;
-            case "-":
-                System.out.println("Your answer is: " + (n1-n2));
-                break;
-            case "*":
-                System.out.println("Your answer is: " + (n1*n2));
-                break;
-            case "/":
-                System.out.println("Your answer is: " + (n1/n2));
-                break;
-            default:
-                System.out.println("Ich verstehe nicht");
-        }
+        try {
+            switch (operation) {
+                case "+":
+                    System.out.println("Your answer is: " + (n1+n2));
+                    break;
+                case "-":
+                    System.out.println("Your answer is: " + (n1-n2));
+                    break;
+                case "*":
+                    System.out.println("Your answer is: " + (n1*n2));
+                    break;
+                case "/":
+                    System.out.println("Your answer is: " + (n1/n2));
+                    break;
+                default:
+                    System.out.println("Ich verstehe nicht");
+            }
+        } catch (InputMismatchException e){
     }
 }
