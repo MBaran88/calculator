@@ -2,6 +2,8 @@ package com.calc;
 
 import javafx.scene.web.PromptData;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -14,8 +16,25 @@ public class Main {
         int y = sc.nextInt();
         int suma = (x + y);
        System.out.println(suma);*/
-        double n1, n2;
-        String operation;
+        //double n1, n2;
+        File file = new File("C:/Test.csv");
+        try{
+            Scanner sc = new Scanner(file);
+            int n1 = sc.nextInt();
+            while (sc.hasNextInt()) {
+                
+
+            }
+
+            System.out.println(n1);
+        }
+        catch (FileNotFoundException e){
+            e.printStackTrace();
+        }
+
+
+
+        /*String operation;
         Scanner scannerObject = new Scanner(System.in);
         System.out.println("Enter first number");
         n1 = scannerObject.nextDouble();
@@ -27,7 +46,7 @@ public class Main {
         System.out.println("Enter your operation");
         operation = op.next();
 
-        try {
+        //try {
             switch (operation) {
                 case "+":
                     System.out.println("Your answer is: " + (n1 + n2));
@@ -45,11 +64,12 @@ public class Main {
                     System.out.println("Ich verstehe nicht");
             }
         } catch (InputMismatchException e) {
-            Double d = new Double(n1);
+            //to kur.. nie dziala
+            /*Double d = new Double(n1);
             int i = d.intValue();
             Double g = new Double(n2);
             int j = g.intValue();
-        }
+        }*/
 
     }
 }
