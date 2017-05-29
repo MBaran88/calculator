@@ -8,15 +8,15 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws InputMismatchException {
-	// zrobic prosty kalkultor ktory przy uzyciu metody Scanner daje nam mozliwosc dodawania, odejmowania, mnozenia i dzielenia
+        // zrobic prosty kalkultor ktory przy uzyciu metody Scanner daje nam mozliwosc dodawania, odejmowania, mnozenia i dzielenia
        /* Scanner sc = new Scanner(System.in);
         int x = sc.nextInt();
         int y = sc.nextInt();
         int suma = (x + y);
        System.out.println(suma);*/
-       double n1, n2;
-       String operation;
-       Scanner scannerObject = new Scanner(System.in);
+        double n1, n2;
+        String operation;
+        Scanner scannerObject = new Scanner(System.in);
         System.out.println("Enter first number");
         n1 = scannerObject.nextDouble();
 
@@ -30,20 +30,26 @@ public class Main {
         try {
             switch (operation) {
                 case "+":
-                    System.out.println("Your answer is: " + (n1+n2));
+                    System.out.println("Your answer is: " + (n1 + n2));
                     break;
                 case "-":
-                    System.out.println("Your answer is: " + (n1-n2));
+                    System.out.println("Your answer is: " + (n1 - n2));
                     break;
                 case "*":
-                    System.out.println("Your answer is: " + (n1*n2));
+                    System.out.println("Your answer is: " + (n1 * n2));
                     break;
                 case "/":
-                    System.out.println("Your answer is: " + (n1/n2));
+                    System.out.println("Your answer is: " + (n1 / n2));
                     break;
                 default:
                     System.out.println("Ich verstehe nicht");
             }
-        } catch (InputMismatchException e){
+        } catch (InputMismatchException e) {
+            Double d = new Double(n1);
+            int i = d.intValue();
+            Double g = new Double(n2);
+            int j = g.intValue();
+        }
+
     }
 }
